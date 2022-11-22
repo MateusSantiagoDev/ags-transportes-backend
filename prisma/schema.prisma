@@ -9,10 +9,11 @@ datasource db {
 
 model Form {
   id          String   @id @default(uuid())
+  
   origem      String
   destino     String
-  data        String
-  hora        DateTime
+  data        Int
+  hora        Int
   nome        String
   empresa     String
   contato     Int
@@ -22,7 +23,6 @@ model Form {
   informacoes String
 
   createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("form")
 }
