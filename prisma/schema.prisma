@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Form {
+  id          String   @id @default(uuid())
+  origem      String
+  destino     String
+  data        String
+  hora        DateTime
+  nome        String
+  empresa     String
+  contato     Int
+  email       String
+  passageiros Int
+  veiculo     String
+  informacoes String
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("form")
+}

@@ -1,10 +1,10 @@
 import { Module } from "@nestjs/common";
-import { formController } from "./form.controller";
-import { formService } from "./form.service";
+import { FormController } from "./form.controller";
+import { FormService } from "./form.service";
 
 @Module({
   imports: [],
-  controllers: [formController],
-  providers: [formService],
+  controllers: [FormController],
+  providers: [FormService],
 })
 export class FormModule {}
